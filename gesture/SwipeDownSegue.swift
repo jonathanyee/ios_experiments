@@ -15,10 +15,13 @@ class SwipeDownSegue: UIStoryboardSegue {
         let secondVCView = self.sourceViewController.view as UIView!
         let firstVCView = self.destinationViewController.view as UIView!
         
+        let screenWidth = UIScreen.mainScreen().bounds.size.width
         let screenHeight = UIScreen.mainScreen().bounds.size.height
         
         let window = UIApplication.sharedApplication().keyWindow
         window?.insertSubview(firstVCView, aboveSubview: secondVCView)
+        
+        firstVCView.frame = CGRectMake(0.0, -screenHeight, screenWidth, screenHeight)
         
         // Animate the transition.
         UIView.animateWithDuration(0.4, animations: { () -> Void in
