@@ -12,6 +12,12 @@
 		187A1E2B1D496EF9006C2147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187A1E291D496EF9006C2147 /* Main.storyboard */; };
 		187A1E2D1D496EF9006C2147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187A1E2C1D496EF9006C2147 /* Assets.xcassets */; };
 		187A1E301D496EF9006C2147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187A1E2E1D496EF9006C2147 /* LaunchScreen.storyboard */; };
+		187A1E381D4987A2006C2147 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A1E371D4987A2006C2147 /* TopViewController.swift */; };
+		187A1E3A1D498B95006C2147 /* SwipeUpSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A1E391D498B95006C2147 /* SwipeUpSegue.swift */; };
+		187A1E3C1D498E81006C2147 /* SwipeDownSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A1E3B1D498E81006C2147 /* SwipeDownSegue.swift */; };
+		187A1E3E1D4A8353006C2147 /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A1E3D1D4A8353006C2147 /* BottomViewController.swift */; };
+		187A1E401D4A86A9006C2147 /* SwipeDownUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A1E3F1D4A86A9006C2147 /* SwipeDownUnwindSegue.swift */; };
+		187A1E421D4AAF68006C2147 /* SwipeUpUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A1E411D4AAF68006C2147 /* SwipeUpUnwindSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		187A1E2C1D496EF9006C2147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187A1E2F1D496EF9006C2147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		187A1E311D496EF9006C2147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187A1E371D4987A2006C2147 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		187A1E391D498B95006C2147 /* SwipeUpSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeUpSegue.swift; sourceTree = "<group>"; };
+		187A1E3B1D498E81006C2147 /* SwipeDownSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDownSegue.swift; sourceTree = "<group>"; };
+		187A1E3D1D4A8353006C2147 /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
+		187A1E3F1D4A86A9006C2147 /* SwipeDownUnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDownUnwindSegue.swift; sourceTree = "<group>"; };
+		187A1E411D4AAF68006C2147 /* SwipeUpUnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeUpUnwindSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				187A1E2C1D496EF9006C2147 /* Assets.xcassets */,
 				187A1E2E1D496EF9006C2147 /* LaunchScreen.storyboard */,
 				187A1E311D496EF9006C2147 /* Info.plist */,
+				187A1E371D4987A2006C2147 /* TopViewController.swift */,
+				187A1E391D498B95006C2147 /* SwipeUpSegue.swift */,
+				187A1E3B1D498E81006C2147 /* SwipeDownSegue.swift */,
+				187A1E3D1D4A8353006C2147 /* BottomViewController.swift */,
+				187A1E3F1D4A86A9006C2147 /* SwipeDownUnwindSegue.swift */,
+				187A1E411D4AAF68006C2147 /* SwipeUpUnwindSegue.swift */,
 			);
 			path = gesture;
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187A1E3C1D498E81006C2147 /* SwipeDownSegue.swift in Sources */,
+				187A1E3A1D498B95006C2147 /* SwipeUpSegue.swift in Sources */,
+				187A1E381D4987A2006C2147 /* TopViewController.swift in Sources */,
 				187A1E281D496EF9006C2147 /* ViewController.swift in Sources */,
 				187A1E261D496EF9006C2147 /* AppDelegate.swift in Sources */,
+				187A1E3E1D4A8353006C2147 /* BottomViewController.swift in Sources */,
+				187A1E421D4AAF68006C2147 /* SwipeUpUnwindSegue.swift in Sources */,
+				187A1E401D4A86A9006C2147 /* SwipeDownUnwindSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
