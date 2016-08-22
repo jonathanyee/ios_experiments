@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let volumeView = MPVolumeView(frame: CGRectMake(-CGFloat.max, 0.0, 0.0, 0.0))
+        self.window?.addSubview(volumeView)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.volumeChanged(_:)), name: "AVSystemController_SystemVolumeDidChangeNotification", object: nil)
+        
+        // detect screenshot
+        let mainQueue = NSOperationQueue.mainQueue()
+        NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationUserDidTakeScreenshotNotification, object: nil, queue: mainQueue) { notification in
+            // executes after screenshot
+            print("screenshot taken")
+        }
+        
         return true
+    }
+    
+    func volumeChanged(notification: NSNotification) {
+        let volume = notification.userInfo!["AVSystemController_AudioVolumeNotificationParameter"] as! Float
+        
+        print("volume \(volume)")
     }
 
     func applicationWillResignActive(application: UIApplication) {

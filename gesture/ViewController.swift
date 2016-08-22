@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -29,6 +30,13 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(rightSwipe)
         view.addGestureRecognizer(upSwipe)
         view.addGestureRecognizer(downSwipe)
+        
+//        do {
+//            try listenVolumeButton()
+//        } catch is ErrorType {
+//            print("cant listen to volume buttons")
+//        }
+        
     }
 
     func handleSwipes(sender: UISwipeGestureRecognizer) {
@@ -74,6 +82,20 @@ class ViewController: UIViewController {
         }
         
         return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)!
+    }
+    
+    func listenVolumeButton() throws {
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setActive(true)
+        audioSession.addObserver(self, forKeyPath: "outputVolume",
+                                 options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "outputVolume"{
+            print("got in here \(change)")
+        }
     }
 }
 
